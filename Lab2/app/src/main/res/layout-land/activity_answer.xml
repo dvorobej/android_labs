@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         style="@style/WelcomeText"
+        android:freezesText="true"
         android:text="" />
 
     <EditText

@@ -13,7 +13,7 @@ class AnswerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_answer)
         textViewTwo.text=intent.getStringExtra("question")
         buttonTwo.setOnClickListener(){
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent()
             intent.putExtra("answer",editTextTwo.text.toString())
             setResult(Activity.RESULT_OK,intent)
             finish()

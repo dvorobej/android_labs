@@ -7,16 +7,27 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_answer.*
+import kotlinx.android.synthetic.main.fragment_activity.*
 
 class AnswerActivity : AppCompatActivity() {
+
+    private lateinit var fragment: MyFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
         textViewTwo.text = intent.getStringExtra("question")
-        buttonTwo.setOnClickListener {
-            val intent = Intent()
-            intent.putExtra("answer", editTextTwo.text.toString())
+//        buttonTwo.setOnClickListener {
+//            val intent = Intent()
+//            intent.putExtra("answer", editTextTwo.text.toString())
+//            setResult(Activity.RESULT_OK, intent)
+//            finish()
+//        }
+        this.fragment = supportFragmentManager.findFragmentById(R.id.second) as MyFragment
+        fragment.button.setOnClickListener {
+            val intent = Intent().apply {
+                putExtra("answer", fragment.editText.text.toString())
+            }
             setResult(Activity.RESULT_OK, intent)
             finish()
         }

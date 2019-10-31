@@ -12,19 +12,25 @@
         android:freezesText="true"
         android:text="" />
 
-    <EditText
-        android:id="@+id/editTextMain"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        style="@style/WelcomeText"
-        android:text="@string/enterText" />
+<!--    <EditText-->
+<!--        android:id="@+id/editTextMain"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        style="@style/WelcomeText"-->
+<!--        android:text="@string/enterText" />-->
 
-    <Button
-        android:id="@+id/buttonMain"
+<!--    <Button-->
+<!--        android:id="@+id/buttonMain"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="81dp"-->
+<!--        style="@style/WelcomeText"-->
+<!--        android:text="@string/button" />-->
+
+    <fragment
+        android:id="@+id/first"
+        class="com.example.lab3.MyFragment"
         android:layout_width="match_parent"
-        android:layout_height="81dp"
-        style="@style/WelcomeText"
-        android:text="@string/button" />
+        android:layout_height="match_parent"/>
 </LinearLayout>
